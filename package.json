@@ -1,6 +1,6 @@
 {
 	"name": "obsidian-pdf-to-images",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Gets each page of the pdf and imports it as a series of images",
 	"main": "main.js",
 	"scripts": {

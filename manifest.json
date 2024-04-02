@@ -1,7 +1,7 @@
 {
 	"id": "obsidian-pdf-to-images",
 	"name": "Import PDF as images",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"minAppVersion": "0.15.0",
 	"description": "Gets each page of the pdf and imports it as a series of images",
 	"author": "JayGee0",
