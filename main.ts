@@ -21,6 +21,14 @@ export default class ConvertPlugin extends Plugin {
 			new FileModal(this.app).open();
 		});
 
+		this.addCommand({
+			id: "obsidian-pdf-to-images",
+			name: "Import PDF as images to current file",
+			callback: () => {
+				new FileModal(this.app).open();
+			}
+		})
+
 		// If the plugin hooks up any global DOM events (on parts of the app that doesn't belong to this plugin)
 		// Using this function will automatically remove the event listener when this plugin is disabled.
 		this.registerDomEvent(document, 'click', (evt: MouseEvent) => {
@@ -84,7 +92,9 @@ export class FileModal extends SuggestModal<TFile> {
 						data += `![[${f.name}|500]]\n`;
 					})
 					return data;
-				})
+				});
+				new Notice(`Successfully imported ${imagesList.length} pages`);
+
 				
 			}
 		})
